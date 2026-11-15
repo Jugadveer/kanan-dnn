@@ -1,0 +1,97 @@
+# Every setting of the early-warning project. The code reads this file
+# through earlywarning/settings.py; change values here, not in the code.
+
+data:
+  url: https://archive.ics.uci.edu/static/public/320/student+performance.zip
+  file: student-por.csv          # Portuguese-language course, 649 students
+  folder: data
+
+inputs:
+  # Columns the model never sees.
+  # - G2: second-period grade. The warning is given right after the first
+  #   term (G1 known), and G2 arrives too late in the year to act on.
+  # - sex: a fairness choice. An earlier version relied on sex more than on
+  #   anything else; `python -m earlywarning experiments` measures what
+  #   leaving it out costs.
+  left_out: [G2, sex]
+  # Groups the fairness audit compares, whether or not they are inputs.
+  audited_groups: [sex, school, address]
+
+target:
+  column: G3                     # final grade, 0-20
+  # Each category covers grades up to and including max_grade.
+  categories:
+    - name: Needs support
+      max_grade: 9
+    - name: On track
+      max_grade: 13
+    - name: High achiever
+      max_grade: 20
+
+split:
+  validation_share: 0.15
+  test_share: 0.15
+  seed: 2024
+
+selection:
+  folds: 5                       # cross-validation folds inside RFECV
+  min_columns: 1                 # RFECV may go down to a single encoded column
+  # one_standard_error: the fewest columns scoring within one standard error
+  # of the best (Breiman et al., 1984). best: the best-scoring count. With
+  # "best", the network gave 0.717 cross-validated balanced accuracy against
+  # 0.762 with only G1 and failures: extra columns were mostly noise to it.
+  rule: one_standard_error
+
+model_selection:
+  # Every model is chosen by stratified 5-fold cross-validation on the
+  # training + validation students (551), with RFECV refitted inside each fold.
+  folds: 5
+  network_candidates: 3          # Hyperband's best distinct settings, re-scored by CV
+  ensemble_seeds: 5              # networks averaged in the seed ensemble (kept only if CV says it helps)
+  repeats: 3                     # repeated 5-fold CV (5 x 3 = 15 folds) for the final comparison
+
+tuning:
+  max_epochs: 30                 # Hyperband's largest training budget per model
+  reduction_factor: 3            # Hyperband keeps the best 1/3 at every round
+  patience: 10                   # early stopping inside each candidate's training
+  embedding_sizes: [2, 4, 6]
+  max_hidden_layers: 3
+  units: [16, 32, 64, 128]
+  dropout: {min_value: 0.1, max_value: 0.5, step: 0.1}
+  l2_strengths: [0.0001, 0.001, 0.01]
+  learning_rates: [0.003, 0.001, 0.0003]
+
+training:
+  focal_gamma: 2.0               # how strongly focal loss down-weights easy students
+  batch_size: 32
+  max_epochs: 300
+  patience: 25                   # epochs without improvement before stopping
+  stopping_share: 0.15           # share of a training set held back for early stopping
+                                 # when no separate validation set is given (inside CV)
+
+baselines:
+  # K-Nearest Neighbours: k from very local (3) to very smooth (35, about 8 %
+  # of a fold's training students); "distance" lets closer students count more.
+  knn:
+    n_neighbors: [3, 5, 9, 15, 25, 35]
+    weights: [uniform, distance]
+  # Decision tree: depth 2 (4 leaves) to 8 (up to 256 leaves); a minimum leaf
+  # size stops leaves that describe one or two students.
+  tree:
+    max_depth: [2, 3, 4, 5, 6, 8]
+    min_samples_leaf: [1, 5, 10, 20]
+
+evaluation:
+  bootstrap_resamples: 2000      # resamples of the test set for confidence intervals
+  confidence: 0.95
+
+explain:
+  shuffles: 20                   # permutation-importance repeats per column
+
+experiments:
+  learning_curve_shares: [0.2, 0.4, 0.6, 0.8, 1.0]
+  calibration_bins: 5            # 98 test students: 5 bins keep about 20 per bin
+
+outputs:
+  artifacts: artifacts           # files the app loads
+  reports: reports               # metrics, tables and charts

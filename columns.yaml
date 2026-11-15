@@ -1,0 +1,129 @@
+# How each input column is shown in the app: the brief's group, a question,
+# and words for coded values. Text from the attribute list on the UCI page.
+# A column without "choices" is a plain count (age, absences).
+# "yes"/"no" are quoted: unquoted, YAML would turn them into true/false.
+
+school:
+  group: Demographic
+  question: Which school?
+  choices: {GP: Gabriel Pereira, MS: Mousinho da Silveira}
+sex:
+  group: Demographic
+  question: Sex
+  choices: {F: Female, M: Male}
+age:
+  group: Demographic
+  question: Age in years
+address:
+  group: Demographic
+  question: Lives in
+  choices: {U: A town or city, R: The countryside}
+famsize:
+  group: Demographic
+  question: Family size
+  choices: {LE3: Three people or fewer, GT3: More than three people}
+Pstatus:
+  group: Demographic
+  question: Parents
+  choices: {T: Live together, A: Live apart}
+guardian:
+  group: Demographic
+  question: Main guardian
+  choices: {mother: Mother, father: Father, other: Someone else}
+Medu:
+  group: Demographic
+  question: Mother's schooling
+  choices: {0: No schooling, 1: Up to 4th grade, 2: 5th to 9th grade, 3: Secondary school, 4: University}
+Fedu:
+  group: Demographic
+  question: Father's schooling
+  choices: {0: No schooling, 1: Up to 4th grade, 2: 5th to 9th grade, 3: Secondary school, 4: University}
+Mjob:
+  group: Demographic
+  question: Mother's work
+  choices: {teacher: Teaching, health: Health care, services: Public services, at_home: Stays at home, other: Other work}
+Fjob:
+  group: Demographic
+  question: Father's work
+  choices: {teacher: Teaching, health: Health care, services: Public services, at_home: Stays at home, other: Other work}
+
+G1:
+  group: Academic
+  question: First-term grade (0-20)
+reason:
+  group: Academic
+  question: Why this school?
+  choices: {home: Near home, reputation: Its reputation, course: The courses, other: Another reason}
+traveltime:
+  group: Academic
+  question: Journey to school
+  choices: {1: Under 15 minutes, 2: 15 to 30 minutes, 3: 30 minutes to an hour, 4: Over an hour}
+studytime:
+  group: Academic
+  question: Study time per week
+  choices: {1: Under 2 hours, 2: 2 to 5 hours, 3: 5 to 10 hours, 4: Over 10 hours}
+failures:
+  group: Academic
+  question: Courses failed before
+  choices: {0: None, 1: One, 2: Two, 3: Three or more}
+schoolsup:
+  group: Academic
+  question: Gets extra help from the school
+  choices: {"no": "No", "yes": "Yes"}
+famsup:
+  group: Academic
+  question: Family helps with studying
+  choices: {"no": "No", "yes": "Yes"}
+paid:
+  group: Academic
+  question: Takes paid extra lessons
+  choices: {"no": "No", "yes": "Yes"}
+nursery:
+  group: Academic
+  question: Went to nursery school
+  choices: {"no": "No", "yes": "Yes"}
+higher:
+  group: Academic
+  question: Plans to go to university
+  choices: {"no": "No", "yes": "Yes"}
+
+famrel:
+  group: Social
+  question: Relationship with family
+  choices: {1: Very poor, 2: Poor, 3: Fair, 4: Good, 5: Excellent}
+freetime:
+  group: Social
+  question: Free time after school
+  choices: {1: Very little, 2: Little, 3: Some, 4: A lot, 5: Very much}
+goout:
+  group: Social
+  question: Goes out with friends
+  choices: {1: Very rarely, 2: Rarely, 3: Sometimes, 4: Often, 5: Very often}
+romantic:
+  group: Social
+  question: In a relationship
+  choices: {"no": "No", "yes": "Yes"}
+activities:
+  group: Social
+  question: Does after-school activities
+  choices: {"no": "No", "yes": "Yes"}
+internet:
+  group: Social
+  question: Internet at home
+  choices: {"no": "No", "yes": "Yes"}
+
+absences:
+  group: Behavioural
+  question: School absences so far
+Dalc:
+  group: Behavioural
+  question: Drinks alcohol on school days
+  choices: {1: Very rarely, 2: Rarely, 3: Sometimes, 4: Often, 5: Very often}
+Walc:
+  group: Behavioural
+  question: Drinks alcohol at weekends
+  choices: {1: Very rarely, 2: Rarely, 3: Sometimes, 4: Often, 5: Very often}
+health:
+  group: Behavioural
+  question: Health right now
+  choices: {1: Very poor, 2: Poor, 3: Fair, 4: Good, 5: Very good}

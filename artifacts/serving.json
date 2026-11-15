@@ -1,0 +1,16 @@
+{
+  "networks": 1,
+  "temperature": 0.5156159146031939,
+  "settings": {
+    "hidden_layers": 3,
+    "units": [
+      64,
+      128,
+      16
+    ],
+    "embedding_size": 2,
+    "dropout": 0.4,
+    "l2": 0.01,
+    "learning_rate": 0.001
+  }
+}

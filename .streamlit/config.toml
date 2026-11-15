@@ -1,0 +1,23 @@
+# App look: a school's early-warning board, the screen a head of year scans
+# for students who need help. Dark board, status lamps in red / amber / green,
+# Barlow (a typeface drawn from road signs) in condensed cuts for labels.
+# earlywarning/charts.py reads these colours, so the saved charts match the app.
+# Lamps, the risk meter, the watch list and table striping are in board.css.
+
+[theme]
+base = "dark"
+primaryColor = "#e0a43a"
+backgroundColor = "#16181d"
+secondaryBackgroundColor = "#1f2228"
+textColor = "#e8e6e1"
+borderColor = "#33373f"
+showWidgetBorder = true
+baseRadius = "none"
+font = "'Barlow Semi Condensed':https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap"
+headingFont = "'Barlow Condensed':https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap"
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false

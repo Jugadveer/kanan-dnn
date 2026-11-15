@@ -1,0 +1,10 @@
+[
+  {
+    "column": "G1",
+    "group": "Academic",
+    "question": "First-term grade (0-20)",
+    "default": 11,
+    "min": 0,
+    "max": 18
+  }
+]

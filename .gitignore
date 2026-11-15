@@ -1,0 +1,8 @@
+# Local environment and caches
+.venv/
+__pycache__/
+.pytest_cache/
+.claude/
+
+# Hyperband's trial checkpoints; `python -m earlywarning train` makes them again
+reports/tuner/

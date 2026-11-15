@@ -1,0 +1,26 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794695946.319142    6568 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794695949.958686    6568 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1794695950.962920    6568 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+repeated_cv ...
+  done in 7.4 min
+ablation ...
+  done in 44.9 min
+learning_curve ...
+  done in 18.9 min
+calibration ...
+  done in 0.0 min
+fairness ...
+  done in 0.0 min
+errors ...
+  done in 0.0 min
+sex_comparison ...
+  done in 0.8 min
+Saved D:\DNN-early-warning\reports\experiments.json in 71.9 minutes
+
+real	72m11.565s
+user	0m0.000s
+sys	0m0.015s

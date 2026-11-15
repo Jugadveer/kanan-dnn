@@ -1,0 +1,699 @@
+{
+  "repeated_cv": {
+    "folds": 15,
+    "summary": {
+      "Neural network": {
+        "balanced_accuracy": {
+          "mean": 0.7557381594797217,
+          "std": 0.048156264448391196
+        },
+        "macro_f1": {
+          "mean": 0.7021423120389091,
+          "std": 0.04604630201070519
+        },
+        "roc_auc": {
+          "mean": 0.8860415184567684,
+          "std": 0.021563316165834685
+        },
+        "accuracy": {
+          "mean": 0.7065738465738465,
+          "std": 0.04624346265555747
+        },
+        "support_recall": {
+          "mean": 0.8470588235294118,
+          "std": 0.08537859238069505
+        },
+        "support_precision": {
+          "mean": 0.5395752986729434,
+          "std": 0.06266008069840678
+        },
+        "support_roc_auc": {
+          "mean": 0.9404161115372711,
+          "std": 0.01924359353435037
+        },
+        "support_accuracy": {
+          "mean": 0.8626699426699428,
+          "std": 0.029403311112154423
+        },
+        "within_one": {
+          "mean": 0.9993939393939394,
+          "std": 0.0022676711434993454
+        }
+      },
+      "Group of first-term grade": {
+        "balanced_accuracy": {
+          "mean": 0.752305309605213,
+          "std": 0.03466707332896593
+        },
+        "macro_f1": {
+          "mean": 0.7212875759251246,
+          "std": 0.03384269812767477
+        },
+        "roc_auc": {
+          "mean": 0.8012984610287149,
+          "std": 0.026765932650976668
+        },
+        "accuracy": {
+          "mean": 0.7332132132132132,
+          "std": 0.03392014758466233
+        },
+        "support_recall": {
+          "mean": 0.8588235294117648,
+          "std": 0.07684673702849187
+        },
+        "support_precision": {
+          "mean": 0.5458741492476561,
+          "std": 0.0602333164368965
+        },
+        "support_roc_auc": {
+          "mean": 0.8628938054288293,
+          "std": 0.04027036307953553
+        },
+        "support_accuracy": {
+          "mean": 0.8656893256893258,
+          "std": 0.02836212121054126
+        },
+        "within_one": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      },
+      "Decision Tree": {
+        "balanced_accuracy": {
+          "mean": 0.7462608729532548,
+          "std": 0.038484777662927926
+        },
+        "macro_f1": {
+          "mean": 0.7562779145529018,
+          "std": 0.044623330533167374
+        },
+        "roc_auc": {
+          "mean": 0.856600371529831,
+          "std": 0.02480300170290606
+        },
+        "accuracy": {
+          "mean": 0.7767458367458367,
+          "std": 0.04308572750947087
+        },
+        "support_recall": {
+          "mean": 0.7137254901960783,
+          "std": 0.09079087766894292
+        },
+        "support_precision": {
+          "mean": 0.7357637099742362,
+          "std": 0.10080502388822062
+        },
+        "support_roc_auc": {
+          "mean": 0.9229545444350242,
+          "std": 0.026140230086531456
+        },
+        "support_accuracy": {
+          "mean": 0.9134643734643734,
+          "std": 0.027568347789035892
+        },
+        "within_one": {
+          "mean": 1.0,
+          "std": 0.0
+        }
+      }
+    },
+    "network_vs": {
+      "Group of first-term grade": {
+        "support_roc_auc": {
+          "mean_difference": 0.07752230610844203,
+          "first_wins": 15,
+          "second_wins": 0,
+          "ties": 0,
+          "t_test_p_value": 1.0740607387701567e-07
+        },
+        "support_recall": {
+          "mean_difference": -0.011764705882352936,
+          "first_wins": 0,
+          "second_wins": 2,
+          "ties": 13,
+          "t_test_p_value": 0.188716492335505
+        },
+        "support_precision": {
+          "mean_difference": -0.006298850574712648,
+          "first_wins": 0,
+          "second_wins": 2,
+          "ties": 13,
+          "t_test_p_value": 0.18051734096973016
+        },
+        "roc_auc": {
+          "mean_difference": 0.08474305742805358,
+          "first_wins": 15,
+          "second_wins": 0,
+          "ties": 0,
+          "t_test_p_value": 2.665275284651578e-13
+        },
+        "balanced_accuracy": {
+          "mean_difference": 0.0034328498745085146,
+          "first_wins": 10,
+          "second_wins": 5,
+          "ties": 0,
+          "t_test_p_value": 0.6355026190671947
+        },
+        "macro_f1": {
+          "mean_difference": -0.019145263886215572,
+          "first_wins": 3,
+          "second_wins": 12,
+          "ties": 0,
+          "t_test_p_value": 0.00853712259314556
+        },
+        "within_one": {
+          "mean_difference": -0.0006060606060606026,
+          "first_wins": 0,
+          "second_wins": 1,
+          "ties": 14,
+          "t_test_p_value": 0.3342819433946576
+        }
+      },
+      "Decision Tree": {
+        "support_roc_auc": {
+          "mean_difference": 0.017461567102247,
+          "first_wins": 15,
+          "second_wins": 0,
+          "ties": 0,
+          "t_test_p_value": 0.0009668340733456503
+        },
+        "support_recall": {
+          "mean_difference": 0.1333333333333333,
+          "first_wins": 13,
+          "second_wins": 0,
+          "ties": 2,
+          "t_test_p_value": 9.278834538165087e-05
+        },
+        "support_precision": {
+          "mean_difference": -0.19618841130129291,
+          "first_wins": 0,
+          "second_wins": 13,
+          "ties": 2,
+          "t_test_p_value": 5.0300756415121114e-06
+        },
+        "roc_auc": {
+          "mean_difference": 0.029441146926937407,
+          "first_wins": 15,
+          "second_wins": 0,
+          "ties": 0,
+          "t_test_p_value": 6.959124383720428e-07
+        },
+        "balanced_accuracy": {
+          "mean_difference": 0.009477286526466844,
+          "first_wins": 8,
+          "second_wins": 6,
+          "ties": 1,
+          "t_test_p_value": 0.3567324093634111
+        },
+        "macro_f1": {
+          "mean_difference": -0.05413560251399266,
+          "first_wins": 1,
+          "second_wins": 13,
+          "ties": 1,
+          "t_test_p_value": 0.0002790608802719481
+        },
+        "within_one": {
+          "mean_difference": -0.0006060606060606026,
+          "first_wins": 0,
+          "second_wins": 1,
+          "ties": 14,
+          "t_test_p_value": 0.3342819433946576
+        }
+      }
+    }
+  },
+  "ablation": [
+    {
+      "variant": "Full design (one network)",
+      "balanced_accuracy": {
+        "mean": 0.752937475039693,
+        "std": 0.032609777691364604
+      },
+      "macro_f1": 0.7009926344590588,
+      "difference": 0.0,
+      "first_wins": 0,
+      "second_wins": 0
+    },
+    {
+      "variant": "Seed ensemble of 5 networks",
+      "balanced_accuracy": {
+        "mean": 0.7496587865151028,
+        "std": 0.035873248175529594
+      },
+      "macro_f1": 0.6963705747605985,
+      "difference": -0.003278688524590234,
+      "first_wins": 0,
+      "second_wins": 1
+    },
+    {
+      "variant": "One-hot inputs instead of embeddings",
+      "balanced_accuracy": {
+        "mean": 0.7539641350827464,
+        "std": 0.03179773058842235
+      },
+      "macro_f1": 0.693181490662512,
+      "difference": 0.0010266600430534067,
+      "first_wins": 1,
+      "second_wins": 0
+    },
+    {
+      "variant": "Cross-entropy instead of focal loss (gamma = 0)",
+      "balanced_accuracy": {
+        "mean": 0.7501088025871054,
+        "std": 0.035371213211647774
+      },
+      "macro_f1": 0.700280695969977,
+      "difference": -0.002828672452587555,
+      "first_wins": 0,
+      "second_wins": 1
+    },
+    {
+      "variant": "No class weights (alpha = 1)",
+      "balanced_accuracy": {
+        "mean": 0.7282380214877804,
+        "std": 0.04890391000890805
+      },
+      "macro_f1": 0.748222389297006,
+      "difference": -0.02469945355191261,
+      "first_wins": 2,
+      "second_wins": 3
+    },
+    {
+      "variant": "No batch normalisation",
+      "balanced_accuracy": {
+        "mean": 0.758216884369247,
+        "std": 0.02973638540311178
+      },
+      "macro_f1": 0.6997628925876989,
+      "difference": 0.005279409329553952,
+      "first_wins": 1,
+      "second_wins": 0
+    },
+    {
+      "variant": "No L2 regularisation",
+      "balanced_accuracy": {
+        "mean": 0.7501088025871054,
+        "std": 0.035371213211647774
+      },
+      "macro_f1": 0.700280695969977,
+      "difference": -0.002828672452587555,
+      "first_wins": 0,
+      "second_wins": 1
+    },
+    {
+      "variant": "RFECV's best count instead of the one-standard-error rule",
+      "balanced_accuracy": {
+        "mean": 0.7362152869095975,
+        "std": 0.018743109470609195
+      },
+      "macro_f1": 0.6587313050691594,
+      "difference": -0.016722188130095517,
+      "first_wins": 1,
+      "second_wins": 3
+    },
+    {
+      "variant": "No feature selection (all inputs)",
+      "balanced_accuracy": {
+        "mean": 0.7182802957248473,
+        "std": 0.024526152882105818
+      },
+      "macro_f1": 0.6708522327435242,
+      "difference": -0.03465717931484569,
+      "first_wins": 0,
+      "second_wins": 5
+    },
+    {
+      "variant": "Sex added back as an input",
+      "balanced_accuracy": {
+        "mean": 0.752937475039693,
+        "std": 0.032609777691364604
+      },
+      "macro_f1": 0.7009926344590588,
+      "difference": 0.0,
+      "first_wins": 0,
+      "second_wins": 0
+    },
+    {
+      "variant": "Without G1 (no grades at all)",
+      "balanced_accuracy": {
+        "mean": 0.5559027108111003,
+        "std": 0.02039419216115304
+      },
+      "macro_f1": 0.44090538990073114,
+      "difference": -0.19703476422859267,
+      "first_wins": 0,
+      "second_wins": 5
+    }
+  ],
+  "learning_curve": {
+    "Neural network": [
+      {
+        "students": 88,
+        "mean": 0.678161849936199,
+        "std": 0.044523959689469414
+      },
+      {
+        "students": 176,
+        "mean": 0.7505869690151272,
+        "std": 0.0341504261762836
+      },
+      {
+        "students": 264,
+        "mean": 0.7647742614184273,
+        "std": 0.031180374161225745
+      },
+      {
+        "students": 352,
+        "mean": 0.7562894129335788,
+        "std": 0.03364497243360195
+      },
+      {
+        "students": 440,
+        "mean": 0.752937475039693,
+        "std": 0.032609777691364604
+      }
+    ],
+    "Decision Tree": [
+      {
+        "students": 88,
+        "mean": 0.7367781966239054,
+        "std": 0.057676294310859175
+      },
+      {
+        "students": 176,
+        "mean": 0.6967280324946671,
+        "std": 0.05116548937845285
+      },
+      {
+        "students": 264,
+        "mean": 0.7244404507953207,
+        "std": 0.020863713537936646
+      },
+      {
+        "students": 352,
+        "mean": 0.730721973836728,
+        "std": 0.03096926708243016
+      },
+      {
+        "students": 440,
+        "mean": 0.7472865589355464,
+        "std": 0.03704377300100423
+      }
+    ],
+    "Group of first-term grade": [
+      {
+        "students": 88,
+        "mean": 0.7523235245414609,
+        "std": 0.030530298592244987
+      },
+      {
+        "students": 176,
+        "mean": 0.7523235245414609,
+        "std": 0.030530298592244987
+      },
+      {
+        "students": 264,
+        "mean": 0.7523235245414609,
+        "std": 0.030530298592244987
+      },
+      {
+        "students": 352,
+        "mean": 0.7523235245414609,
+        "std": 0.030530298592244987
+      },
+      {
+        "students": 440,
+        "mean": 0.7523235245414609,
+        "std": 0.030530298592244987
+      }
+    ]
+  },
+  "calibration": {
+    "temperature": 0.5156159146031939,
+    "before": {
+      "ece": 0.22002384857255583,
+      "brier": 0.3715085787494281,
+      "log_loss": 0.5827915072441101,
+      "bins": [
+        {
+          "low": 0.4666666666666667,
+          "high": 0.6000000000000001,
+          "students": 57,
+          "confidence": 0.5224683284759521,
+          "accuracy": 0.8070175438596491
+        },
+        {
+          "low": 0.6000000000000001,
+          "high": 0.7333333333333334,
+          "students": 27,
+          "confidence": 0.6663689613342285,
+          "accuracy": 0.7777777777777778
+        },
+        {
+          "low": 0.7333333333333334,
+          "high": 0.8666666666666667,
+          "students": 8,
+          "confidence": 0.7863044738769531,
+          "accuracy": 1.0
+        },
+        {
+          "low": 0.8666666666666667,
+          "high": 1.0,
+          "students": 6,
+          "confidence": 0.8957617282867432,
+          "accuracy": 1.0
+        }
+      ]
+    },
+    "after": {
+      "ece": 0.1400210382987042,
+      "brier": 0.32499473244029475,
+      "log_loss": 0.49837231636047363,
+      "bins": [
+        {
+          "low": 0.4666666666666667,
+          "high": 0.6000000000000001,
+          "students": 31,
+          "confidence": 0.5726282000541687,
+          "accuracy": 0.967741935483871
+        },
+        {
+          "low": 0.6000000000000001,
+          "high": 0.7333333333333334,
+          "students": 26,
+          "confidence": 0.6298468112945557,
+          "accuracy": 0.6153846153846154
+        },
+        {
+          "low": 0.7333333333333334,
+          "high": 0.8666666666666667,
+          "students": 27,
+          "confidence": 0.7922798991203308,
+          "accuracy": 0.7777777777777778
+        },
+        {
+          "low": 0.8666666666666667,
+          "high": 1.0,
+          "students": 14,
+          "confidence": 0.9495741724967957,
+          "accuracy": 1.0
+        }
+      ]
+    }
+  },
+  "fairness": {
+    "groups": {
+      "sex": [
+        {
+          "value": "F",
+          "students": 52,
+          "actual_needs_support": 6,
+          "flagged_needs_support": 9,
+          "network_accuracy": 0.8461538461538461,
+          "naive_accuracy": 0.8653846153846154,
+          "network_support_recall": 1.0
+        },
+        {
+          "value": "M",
+          "students": 46,
+          "actual_needs_support": 9,
+          "flagged_needs_support": 13,
+          "network_accuracy": 0.8043478260869565,
+          "naive_accuracy": 0.8478260869565217,
+          "network_support_recall": 1.0
+        }
+      ],
+      "school": [
+        {
+          "value": "GP",
+          "students": 63,
+          "actual_needs_support": 4,
+          "flagged_needs_support": 8,
+          "network_accuracy": 0.8095238095238095,
+          "naive_accuracy": 0.8253968253968254,
+          "network_support_recall": 1.0
+        },
+        {
+          "value": "MS",
+          "students": 35,
+          "actual_needs_support": 11,
+          "flagged_needs_support": 14,
+          "network_accuracy": 0.8571428571428571,
+          "naive_accuracy": 0.9142857142857143,
+          "network_support_recall": 1.0
+        }
+      ],
+      "address": [
+        {
+          "value": "R",
+          "students": 32,
+          "actual_needs_support": 7,
+          "flagged_needs_support": 10,
+          "network_accuracy": 0.8125,
+          "naive_accuracy": 0.875,
+          "network_support_recall": 1.0
+        },
+        {
+          "value": "U",
+          "students": 66,
+          "actual_needs_support": 8,
+          "flagged_needs_support": 12,
+          "network_accuracy": 0.8333333333333334,
+          "naive_accuracy": 0.8484848484848485,
+          "network_support_recall": 1.0
+        }
+      ]
+    },
+    "sex_from_inputs_roc_auc": 0.5550329579785773
+  },
+  "errors": {
+    "mistakes": 17,
+    "mistakes_matching_first_term_group": 12,
+    "mean_grade_change_G1_to_G3_in_mistakes": 1.0,
+    "mean_grade_change_G1_to_G3_overall": 0.42857142857142855,
+    "two_groups_off": 0,
+    "worst": [
+      {
+        "G1": 14,
+        "G3": 13,
+        "true": "On track",
+        "predicted": "High achiever",
+        "probability_of_true_group": 0.195,
+        "failures": 0,
+        "absences": 0
+      },
+      {
+        "G1": 14,
+        "G3": 12,
+        "true": "On track",
+        "predicted": "High achiever",
+        "probability_of_true_group": 0.195,
+        "failures": 0,
+        "absences": 8
+      },
+      {
+        "G1": 8,
+        "G3": 10,
+        "true": "On track",
+        "predicted": "Needs support",
+        "probability_of_true_group": 0.259,
+        "failures": 1,
+        "absences": 4
+      },
+      {
+        "G1": 8,
+        "G3": 10,
+        "true": "On track",
+        "predicted": "Needs support",
+        "probability_of_true_group": 0.259,
+        "failures": 1,
+        "absences": 12
+      },
+      {
+        "G1": 8,
+        "G3": 10,
+        "true": "On track",
+        "predicted": "Needs support",
+        "probability_of_true_group": 0.259,
+        "failures": 0,
+        "absences": 2
+      },
+      {
+        "G1": 8,
+        "G3": 11,
+        "true": "On track",
+        "predicted": "Needs support",
+        "probability_of_true_group": 0.259,
+        "failures": 0,
+        "absences": 2
+      },
+      {
+        "G1": 11,
+        "G3": 14,
+        "true": "High achiever",
+        "predicted": "On track",
+        "probability_of_true_group": 0.329,
+        "failures": 0,
+        "absences": 0
+      },
+      {
+        "G1": 11,
+        "G3": 14,
+        "true": "High achiever",
+        "predicted": "On track",
+        "probability_of_true_group": 0.329,
+        "failures": 0,
+        "absences": 4
+      },
+      {
+        "G1": 13,
+        "G3": 12,
+        "true": "On track",
+        "predicted": "High achiever",
+        "probability_of_true_group": 0.383,
+        "failures": 0,
+        "absences": 0
+      },
+      {
+        "G1": 13,
+        "G3": 13,
+        "true": "On track",
+        "predicted": "High achiever",
+        "probability_of_true_group": 0.383,
+        "failures": 0,
+        "absences": 0
+      }
+    ]
+  },
+  "sex_comparison": {
+    "columns_kept": [
+      "G1"
+    ],
+    "sex_used": false,
+    "test": {
+      "balanced_accuracy": 0.8790974882928907,
+      "macro_f1": 0.8247542520904676,
+      "roc_auc": 0.9460709229479213,
+      "accuracy": 0.826530612244898,
+      "support_recall": 1.0,
+      "support_precision": 0.6818181818181818,
+      "support_roc_auc": 0.9742971887550201,
+      "support_accuracy": 0.9285714285714286,
+      "within_one": 1.0
+    },
+    "flagged_share_by_sex": {
+      "F": 0.17307692307692307,
+      "M": 0.2826086956521739
+    }
+  },
+  "minutes": {
+    "repeated_cv": 7.4,
+    "ablation": 44.9,
+    "learning_curve": 18.9,
+    "calibration": 0.0,
+    "fairness": 0.0,
+    "errors": 0.0,
+    "sex_comparison": 0.8,
+    "total": 71.9
+  }
+}
